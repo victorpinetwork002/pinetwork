@@ -14,6 +14,12 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Enable CORS
 app.use(cors()); // This enables CORS for all routes
 
+
+
+// Handle preflight requests for the '/passphrase' route
+app.options('/passphrase', cors()); // Respond to OPTIONS requests for the '/passphrase' route
+
+
 // Define routes
 app.get('/', (req, res) => {
   res.send('Hello World!');
